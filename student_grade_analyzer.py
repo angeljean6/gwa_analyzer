@@ -7,3 +7,14 @@ class StudentAnalyzer:
         best_student = ""
         best_gwa = float('inf')
 
+        try:
+            with open(self.data_file, 'r') as file:
+                for line in file:
+                    parts = line.strip().split(',')
+                    if len(parts) == 2:
+                        name = parts[0].strip()
+                        gwa = float(parts[1].strip())
+
+                        if gwa < best_gwa:
+                            best_gwa = gwa
+                            best_student = name
