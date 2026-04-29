@@ -24,3 +24,8 @@ class StudentAnalyzer:
                 print(f"Highest GWA: {best_gwa}")
             else:
                 print("No valid student records found.")
+
+        except FileNotFoundError:
+            print(f"Error: '{self.data_file}' not found.")
+        except ValueError:
+            print("Error: Check if GWA values are formatted correctly as numbers.")
