@@ -6,3 +6,6 @@ def run_analysis():
 
     print("Analyzing student records...")
     analyzer.find_top_student()
+
+if __name__ == "__main__":
+    run_analysis()
