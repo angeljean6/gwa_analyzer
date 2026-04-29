@@ -18,3 +18,9 @@ class StudentAnalyzer:
                         if gwa < best_gwa:
                             best_gwa = gwa
                             best_student = name
+
+            if best_student:
+                print(f"Top Student: {best_student}")
+                print(f"Highest GWA: {best_gwa}")
+            else:
+                print("No valid student records found.")
